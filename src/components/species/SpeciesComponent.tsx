@@ -1,7 +1,18 @@
-import React from 'react'
+import { FC } from 'react'
+interface Props {
+    name: string;
+    language: string;
+    averageLifespan: string;
+}
 
-export const SpeciesComponent = () => {
+export const SpeciesComponent: FC<Props> = ({ name, language, averageLifespan }) => {
     return (
-        <div>SpeciesComponent</div>
+        <li>
+            {name}
+            <ul>
+                <li>language: {language}</li>
+                <li>average lifespan: {averageLifespan}</li>
+            </ul>
+        </li>
     )
 }

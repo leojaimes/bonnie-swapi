@@ -8,8 +8,8 @@ export const getPeople = async (pageParam = 1): Promise<PeopleResult> => {
 }
 
 
-export const getSpecies = async (): Promise<SpeciesResult> => {
-    const res = await swapiApi.get<SpeciesResult>('/species')
+export const getSpecies = async (pageParam = 1): Promise<SpeciesResult> => {
+    const res = await swapiApi.get<SpeciesResult>(`/species?page=${pageParam}`)
     return res.data
 }
 
