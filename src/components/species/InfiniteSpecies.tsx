@@ -16,7 +16,6 @@ export const InfiniteSpecies = () => {
 
     })
     return (
-
         <InfiniteScroll loadMore={() => { fetchNextPage() }} hasMore={hasNextPage} >
             {
                 data?.pages.map((page, index) => {
@@ -30,7 +29,6 @@ export const InfiniteSpecies = () => {
                     ))
                 })
             }
-
         </InfiniteScroll>
     )
 }
